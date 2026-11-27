@@ -1,0 +1,14 @@
+{
+  "feature": "interaction_mode",
+  "experimentName": "interaction_mode_experiment",
+  "experimentId": null,
+  "controlValue": "freeform",
+  "treatmentKey": "guided",
+  "treatmentValue": "guided",
+  "primaryEvent": "interaction_resolved",
+  "metrics": [
+    { "event": "interaction_resolved", "aggregation": "mean", "direction": "up" },
+    { "event": "response_latency_ms", "aggregation": "mean", "direction": "down" },
+    { "event": "story_completed", "aggregation": "occurrence", "direction": "up" }
+  ]
+}

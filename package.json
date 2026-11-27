@@ -1,0 +1,28 @@
+{
+  "name": "branchlab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Compare interaction patterns with a Flagsmith experiment, a local metric log, and a synthetic cohort.",
+  "scripts": {
+    "dev": "vite --config demo/vite.config.ts",
+    "test": "tsx --test tests/session.test.ts tests/metrics.test.ts tests/flagsmith.test.ts tests/cohort.test.ts tests/operator.test.ts",
+    "cohort": "tsx cohort/run.ts live 20 1",
+    "cohort:dry": "tsx cohort/run.ts dry-run 20 1",
+    "results": "tsx operator/results.ts",
+    "ship": "tsx operator/ship.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@flagsmith/flagsmith": "^12.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.11",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.4.0"
+  }
+}

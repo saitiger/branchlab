@@ -1,0 +1,95 @@
+:root {
+  color-scheme: light;
+  --paper: #f4efe4;
+  --ink: #1d1a16;
+  --muted: #5e564c;
+  --line: #c9bba6;
+  --stamp: #8f3d2c;
+  --stamp-ink: #fff8f2;
+  --panel: #fffaf3;
+  --focus: #1d4c6e;
+  font-family: Palatino, "Palatino Linotype", "Iowan Old Style", "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(143, 61, 44, 0.08), transparent 32%),
+    var(--paper);
+  color: var(--ink);
+}
+
+button, input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--ink);
+  background: var(--panel);
+  padding: 0.7rem 1rem;
+}
+
+button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+#app { max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+
+.mark {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--stamp);
+}
+
+h1 { font-size: 3rem; line-height: 0.95; margin: 0.3rem 0 0.6rem; font-weight: 500; }
+h2 { font-size: 1.7rem; font-weight: 500; margin: 0 0 0.8rem; }
+
+.lede { font-size: 1.2rem; max-width: 38rem; color: var(--muted); }
+
+.row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
+
+.primary { background: var(--ink); color: var(--paper); }
+
+.story {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 1.3rem;
+  box-shadow: 6px 6px 0 var(--line);
+}
+
+.status { color: var(--stamp); font-size: 0.95rem; margin-bottom: 0.6rem; }
+
+.prompt { font-size: 1.55rem; line-height: 1.3; margin: 0 0 1rem; }
+
+.suggestions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+
+.suggestions button {
+  background: var(--stamp);
+  color: var(--stamp-ink);
+  border-color: var(--stamp);
+}
+
+.talk { display: flex; gap: 0.6rem; align-items: center; }
+.talk input { flex: 1; padding: 0.7rem; border: 1px solid var(--line); background: white; }
+
+.reply { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px dashed var(--line); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; }
+.card { border: 1px solid var(--line); background: var(--panel); padding: 0.9rem; }
+.card b { display: block; font-size: 1.6rem; margin-top: 0.3rem; }
+.card span { color: var(--muted); }
+
+.panel { margin-top: 1.6rem; }
+.note { color: var(--muted); }
+
+@media (max-width: 640px) {
+  h1 { font-size: 2.3rem; }
+  .prompt { font-size: 1.3rem; }
+}
