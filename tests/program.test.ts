@@ -3,16 +3,23 @@ import test from "node:test";
 import { characterWantGate, situationTextCheck } from "../experiments/gates.ts";
 import { PROGRAM, syntheticAllowed } from "../experiments/program.ts";
 
-test("the program has the five experiments and only two allow a synthetic check", () => {
+test("the program has the six experiments and only two allow a synthetic check", () => {
   assert.deepEqual(PROGRAM.map((spec) => spec.id), [
     "character_want",
     "situation_opening",
     "hero_address",
     "interaction_mode",
     "shelf_copy",
+    "namaskar_greeting",
   ]);
   const allowed = PROGRAM.filter(syntheticAllowed).map((spec) => spec.id);
   assert.deepEqual(allowed, ["character_want", "situation_opening"]);
+  const greeting = PROGRAM.find((spec) => spec.id === "namaskar_greeting");
+  assert.equal(greeting?.flag, "namaskar_greeting");
+  assert.equal(greeting?.controlKey, "silent");
+  assert.equal(greeting?.treatmentKey, "namaskar");
+  assert.equal(greeting?.primaryEvent, "story_begun");
+  assert.equal(greeting && syntheticAllowed(greeting), false);
 });
 
 test("the character-want gate passes and does not invent a child result", () => {

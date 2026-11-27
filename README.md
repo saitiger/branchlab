@@ -4,7 +4,7 @@ BranchLab compares two ways of answering a real-time character: saying anything,
 
 The demo is a three-beat conversation with Ivo, a night clerk in a map room. It does not need another product, a model API, or a private story.
 
-Five experiments are named in [docs/program.md](docs/program.md). `npm run board` prints the synthetic gates. Those gates are not results about children. Freeform versus guided, and the shelf sentence, are counted only from real visits.
+Six experiments are named in [docs/program.md](docs/program.md). `npm run board` prints the synthetic gates. Those gates are not results about children. Freeform versus guided, the shelf sentence, and the Namaskar greeting are counted only from real visits.
 
 ## Try it
 
