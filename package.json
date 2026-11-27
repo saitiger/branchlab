@@ -6,9 +6,10 @@
   "description": "Compare interaction patterns with a Flagsmith experiment, a local metric log, and a synthetic cohort.",
   "scripts": {
     "dev": "vite --config demo/vite.config.ts",
-    "test": "tsx --test tests/session.test.ts tests/metrics.test.ts tests/flagsmith.test.ts tests/cohort.test.ts tests/operator.test.ts tests/program.test.ts",
+    "test": "tsx --test tests/session.test.ts tests/metrics.test.ts tests/flagsmith.test.ts tests/cohort.test.ts tests/operator.test.ts tests/program.test.ts tests/copy.test.ts",
     "cohort": "tsx cohort/run.ts live 20 1",
     "cohort:dry": "tsx cohort/run.ts dry-run 20 1",
+    "copy:dry": "tsx copy/run.ts 200 11",
     "results": "tsx operator/results.ts",
     "board": "tsx experiments/board.ts",
     "ship": "tsx operator/ship.ts",

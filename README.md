@@ -31,6 +31,10 @@ npm run cohort
 
 `cohort:dry` writes a dashboard file and does not call Flagsmith. `cohort` uses Flagsmith assignment for 20 users. Say so anywhere those rows are shown. Flagsmith cannot filter them out of the official result. A custom size is `npx tsx cohort/run.ts dry-run 6 1` or `npx tsx cohort/run.ts live 40 2`.
 
+## Kahani shelf copy
+
+A separate test compares two sentences on the Kahani shelf. The lines, the metric, and the local dry run are in [docs/kahani-copy.md](docs/kahani-copy.md). That dry run checks the math and does not call Flagsmith. The official shelf number still comes only from real visits, as [docs/program.md](docs/program.md) says. The same skill, [skills/flagsmith-prove-experiment/SKILL.md](skills/flagsmith-prove-experiment/SKILL.md), can set that test up or a later experiment with new names.
+
 ## Read the metrics
 
 `npm run results` prints the latest simulated file, then refreshes Flagsmith at most once every five minutes and prints the win summary. The in-app cards are local. They are not the Flagsmith mean and they do not show win probability.

@@ -10,5 +10,5 @@
     "types": ["node"],
     "useDefineForClassFields": true
   },
-  "include": ["src", "demo", "cohort", "operator", "tests"]
+  "include": ["src", "demo", "cohort", "operator", "tests", "copy"]
 }
