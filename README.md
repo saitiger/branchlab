@@ -59,6 +59,6 @@ That ends the experiment and sets `interaction_mode` to the winning value, enabl
 | `cohort/` | Synthetic users and the published behavior model |
 | `skills/flagsmith-prove-experiment/` | Agent skill for one Flagsmith experiment |
 | `operator/` | Read results and ship a named winner |
-| `docs/` | Setup, architecture, and the experiment definition |
+| `docs/` | Setup, the Flagsmith skill, architecture, and the experiment definition |
 
-[docs/getting-started.md](docs/getting-started.md) · [docs/architecture.md](docs/architecture.md) · [docs/experiments.md](docs/experiments.md)
+[docs/getting-started.md](docs/getting-started.md) · [docs/flagsmith-setup.md](docs/flagsmith-setup.md) · [docs/architecture.md](docs/architecture.md) · [docs/experiments.md](docs/experiments.md)
