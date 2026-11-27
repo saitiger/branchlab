@@ -19,4 +19,4 @@ The demo offers four doors:
 
 Speech uses the browser's speech service when that API exists. BranchLab does not store the words. Typing works either way. Hold the talk control, or send a typed reply. In the guided version, three suggestions sit beside those controls.
 
-A synthetic cohort is documented in `cohort/README.md`. Official experiment setup is documented in `docs/experiments.md`.
+A synthetic cohort is documented in `cohort/README.md`. Official experiment setup is documented in `docs/experiments.md`. The Kahani shelf-copy test is documented in `docs/kahani-copy.md`.

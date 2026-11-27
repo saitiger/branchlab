@@ -1,7 +1,8 @@
 ---
 name: flagsmith-prove-experiment
 description: >-
-  Sets up, checks, and finishes one Flagsmith experiment with the Flagsmith CLI.
+  Sets up, checks, and finishes one Flagsmith experiment with the Flagsmith CLI,
+  including Kahani shelf copy and setting up the next experiment after one exists.
   Use when the user asks to prove a variant, run an A/B test, create a Flagsmith
   experiment, wire exposure and conversion events, read experiment results, or
   roll a winning variant out to everyone.
@@ -11,7 +12,7 @@ description: >-
 
 One experiment, from a hypothesis to a running test, then a winner only after the user names it. Use the Flagsmith CLI v2. Call the API through `flagsmith api` when no command exists. Do not use the Flagsmith MCP server to create or start experiments.
 
-Read [reference.md](reference.md) only when creating the metric or experiment. Read [examples.md](examples.md) only when the test is freeform voice against suggested replies.
+Read [reference.md](reference.md) only when creating the metric or experiment. Read [examples.md](examples.md) for the Kahani shelf copy or freeform-vs-guided. A further experiment uses the same nine steps with new names. Do not reuse `interaction_mode` or `kahani_shelf_copy` for a third question.
 
 ## Rules
 

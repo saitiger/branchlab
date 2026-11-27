@@ -1,0 +1,33 @@
+{
+  "simulated": true,
+  "transport": "dry-run",
+  "feature": "kahani_shelf_copy",
+  "experiment": "kahani_shelf_copy_experiment",
+  "hypothesis": "A concrete line about the child speaking gets more people to start a Kahani story than the poetic tagline.",
+  "copies": {
+    "listen": {
+      "key": "listen",
+      "role": "control",
+      "line": "Stories that listen to you."
+    },
+    "next": {
+      "key": "next",
+      "role": "treatment",
+      "line": "Your child says what happens next."
+    }
+  },
+  "seed": 11,
+  "visitorsPerCopy": 200,
+  "result": {
+    "controlClicks": 47,
+    "controlVisitors": 200,
+    "treatmentClicks": 65,
+    "treatmentVisitors": 200,
+    "controlRate": 0.235,
+    "treatmentRate": 0.325,
+    "absoluteLift": 0.09000000000000002,
+    "z": 2.0044593143431833,
+    "twoSidedP": 0.04502074307474091
+  },
+  "note": "Synthetic visitors drawn from copy/model.ts. Flagsmith was not called. These rates are not evidence about children or parents."
+}

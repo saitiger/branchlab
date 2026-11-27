@@ -1,0 +1,19 @@
+{
+  "feature": "kahani_shelf_copy",
+  "experimentName": "kahani_shelf_copy_experiment",
+  "experimentId": null,
+  "hypothesis": "A concrete line about the child speaking gets more people to start a Kahani story than the poetic tagline.",
+  "controlKey": "listen",
+  "controlValue": "listen",
+  "controlLine": "Stories that listen to you.",
+  "treatmentKey": "next",
+  "treatmentValue": "next",
+  "treatmentLine": "Your child says what happens next.",
+  "primaryEvent": "play_started",
+  "aggregation": "mean",
+  "direction": "up",
+  "value": "1 if the visitor starts Kahani, 0 if they leave without starting",
+  "rolloutPercent": 100,
+  "split": "even",
+  "status": "not created in Flagsmith"
+}
