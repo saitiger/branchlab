@@ -14,7 +14,7 @@ export interface ExperimentSpec {
   claim: string;
 }
 
-/** Five experiments. The story app stays in a private repository and sends these event names. */
+/** Six experiments. The story app stays in a private repository and sends these event names. */
 export const PROGRAM: ExperimentSpec[] = [
   {
     id: "character_want",
@@ -80,6 +80,19 @@ export const PROGRAM: ExperimentSpec[] = [
     direction: "up",
     cohort: "children",
     claim: "Real visits only. A click on Play. Synthetic visitors do not see the shelf.",
+  },
+  {
+    id: "namaskar_greeting",
+    flag: "namaskar_greeting",
+    controlKey: "silent",
+    controlValue: "silent",
+    treatmentKey: "namaskar",
+    treatmentValue: "namaskar",
+    primaryEvent: "story_begun",
+    aggregation: "mean",
+    direction: "up",
+    cohort: "children",
+    claim: "Real visits only. The shelf plays Namaskar, little friend. I'm Tara. Silence is the control. Synthetic visitors do not hear it.",
   },
 ];
 

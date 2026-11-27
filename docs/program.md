@@ -1,4 +1,4 @@
-# Five experiments
+# Six experiments
 
 Flagsmith holds the flags and the official results. This repository names the flags, the variation keys, and the event names. The story client that shows a question stays in a private repository. It sends these event names. It does not live here.
 
@@ -11,7 +11,10 @@ Synthetic checks are allowed only where a persona cannot pretend to be a child. 
 | Guide the hero, or be the hero | `hero_address` | `guide` | `be` | `first_person` mean, up | Not this round. A simulated reply copies the pronoun. |
 | Freeform vs guided | `interaction_mode` | `control` (`freeform`) | `guided` | `chip_exact` mean, up | Children. Also send `usable_answer` when the replies are hidden. |
 | Copy | `kahani_shelf_copy` | `listen` | `next` | `play_started` mean, up | Visitors who see the shelf. Synthetic users do not. |
+| Namaskar greeting | `namaskar_greeting` | `silent` | `namaskar` | `story_begun` mean, up | Visitors who open the shelf. Synthetic users do not hear the greeting. |
 
 `chip_exact` is 1 when the answer text is exactly a reply that was on screen. `usable_answer` is 1 when the answer is a real reply and the replies were hidden. `play_started` is 1 on the Play click and 0 when the visitor leaves without clicking.
+
+`story_begun` is 1 when a story starts and 0 when the visitor leaves the shelf without starting one. Expose it when the shelf opens. `silent` plays nothing. `namaskar` plays "Namaskar, little friend. I'm Tara." The stories stay the same, and the shelf sentence stays on its own flag. Send `story_begun` once per shelf visit. It is a different event from `play_started`.
 
 Create each flag enabled, with a non-empty key on every variation, and do not start it until the warehouse is connected and you mean to lock the flag. The skill in `skills/flagsmith-prove-experiment/` is the procedure for one experiment. Repeat it with the names in this table. Official results are the Flagsmith means. Refresh at most once every five minutes.
